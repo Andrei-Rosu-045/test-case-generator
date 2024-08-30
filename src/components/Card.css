@@ -1,0 +1,23 @@
+.custom-card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  .custom-card .card-body {
+    padding: 20px;
+  }
+  
+  .card-one {
+    height: 300px; /* Adjust height as needed */
+  }
+  
+  .card-two {
+    height: 200px; /* Adjust height as needed */
+  }
+  
+  .card-three {
+    height: 500px; /* Adjust height as needed */
+  }
+  

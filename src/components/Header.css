@@ -1,0 +1,43 @@
+.header {
+  background-color: #8490a9;
+  color: white;
+}
+
+.header-logo .logo {
+  height: 20px; /* Adjust the height to make the logo smaller */
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header-buttons {
+  margin-left: auto; /* Pushes the buttons to the right */
+}
+
+.header-buttons .btn {
+  margin-left: 10px;
+}
+
+.header-buttons .btn-outline-secondary {
+  border: none;
+  color: white;
+}
+
+.header-buttons .btn-outline-secondary:hover {
+  background-color: rgba(148, 139, 139, 0.1);
+}
+
+.deploy-button {
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+}
+
+.deploy-button:hover {
+  background-color: darkgray;
+  border-color: darkgray;
+}
