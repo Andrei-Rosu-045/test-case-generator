@@ -6,18 +6,20 @@
 }
 
 .header-logo .logo {
-  height: 20px; /* Adjust the height to make the logo smaller */
+  height: 35px; /* Adjust the height to make the logo smaller */
+  margin-left: -190px;
 }
 
 .header-title {
-  flex-grow: 1;
+  flex-grow: 5;
   text-align: center;
-  margin: 0;
-  font-size: 1.5rem;
+  margin-left: 75px;
+  font-size: 5;
 }
 
 .header-buttons {
   margin-left: auto; /* Pushes the buttons to the right */
+  margin-right: -200px;
 }
 
 .header-buttons .btn {

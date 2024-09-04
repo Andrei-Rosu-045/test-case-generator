@@ -1,40 +1,36 @@
-// src/App.tsx
 import React, { useState } from 'react';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import UploadFileCard from './components/UploadFileCard';
-import ProjectNameCard from './components/ProjectNameCard';
-import GenerateTestCasesCard from './components/GenerateTestCasesCard';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import LoginPage from './components/LoginPage';
+import MainPage from './MainPaige';
 import './App.css';
 
 const App: React.FC = () => {
-  const [projectName, setProjectName] = useState<string>('');
-  const [selectedOption, setSelectedOption] = useState<string>('uploadFile'); // Default to 'uploadFile'
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [username, setUsername] = useState<string>('');
+  const [userDomain, setUserDomain] = useState<string>('');
 
-  const renderMainContent = () => {
-    if (selectedOption === 'uploadFile') {
-      return (
-        <div className="upload-section">
-          <ProjectNameCard projectName={projectName} setProjectName={setProjectName} />
-          <UploadFileCard />
-        </div>
-      );
-    } else if (selectedOption === 'generateTestCases') {
-      return <GenerateTestCasesCard projectName={projectName} />;
-    }
-    return null;
+  const handleLogin = (username: string, userDomain: string) => {
+    setUsername(username);
+    setUserDomain(userDomain);
+    setIsLoggedIn(true);
   };
 
   return (
-    <div className="app-container">
-      <Header />
-      <div className="content-container">
-        <Sidebar selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
-        <main className="main-content">
-          {renderMainContent()}
-        </main>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage onLogin={handleLogin} />} />
+        <Route
+          path="/main"
+          element={
+            isLoggedIn ? (
+              <MainPage username={username} userDomain={userDomain} />
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+        />
+      </Routes>
+    </Router>
   );
 };
 

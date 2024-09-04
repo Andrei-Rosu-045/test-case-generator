@@ -1,0 +1,56 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px; /* Padding around the container */
+}
+
+.login-title {
+  margin-bottom: 30px; /* Space between title and form */
+  text-align: center; /* Center title horizontally */
+  font-weight: bold;
+}
+
+.login-form {
+  background: #fff;
+  padding: 30px; /* Padding inside the form */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Heavier shadow for better focus */
+  width: 100%;
+  max-width: 500px; /* Limit form width */
+  min-height: 475px; /* Set minimum height for the form */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between elements */
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px; /* Padding inside input fields */
+  margin-bottom: 15px; /* Space between input fields */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px; /* Padding inside the button */
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px; /* Space above the button */
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red; /* Red color for error message */
+  margin-bottom: 20px; /* Space between error message and inputs */
+}

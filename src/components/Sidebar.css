@@ -1,7 +1,11 @@
 /* src/components/Sidebar.css */
 
 .sidebar {
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 275px;
     background-color: #172031; /* Dark background to match existing theme */
     color: #d7d9db;
     min-height: 100vh;
@@ -9,34 +13,61 @@
     box-sizing: border-box;
   }
   
-  .sidebar-title {
-    margin-bottom: 20px;
+  .user-info {
     text-align: center;
-    font-size: 1.5rem;
-    border-bottom: 1px solid #d7d9db;
-    padding-bottom: 10px;
+    margin-bottom: 5px;
   }
   
-  .sidebar-list {
+  .sidebar-menu {
+    flex-grow: 1; /* Allows menu to expand and center vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    width: 100%;
+  }
+  
+  .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
   .sidebar-item {
-    padding: 10px 15px;
-    margin-bottom: 10px;
+    background-color: #007bff; /* Background color for options */
+    color: #fff; /* Text color */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .sidebar-item:hover {
-    background-color: #1e2a38;
+    text-align: center; /* Center text horizontally */
   }
   
   .sidebar-item.active {
-    background-color: #8490a9;
-    color: white;
+    background-color: #0056b3; /* Darker color for active state */
   }
   
+  .sidebar-item:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+
+  .username {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  .user-domain {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 23px;
+  }
+  
+  .upload-option {
+    margin-bottom: 50px;
+    margin-top: -120px;
+  }
+
+  .generate-option {
+    margin-top: 210px;
+  }

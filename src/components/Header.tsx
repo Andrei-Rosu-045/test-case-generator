@@ -15,14 +15,16 @@ const Header: React.FC = () => {
         </div>
 
         {/* Center: Title */}
-        <h1 className="header-title">Test Case Generator</h1>
+        <h1 className="header-title">Test Case Generator Tool</h1>
 
         {/* Right side: Buttons */}
         <div className="header-buttons d-flex align-items-center ml-auto">
           <Button
             variant="primary"
             className="mr-2 deploy-button"
-            style={{ backgroundColor: 'transparent', borderColor: 'transparent', color: 'white' }}
+            style={{ backgroundColor: 'transparent', borderColor: 'transparent', color: 'white', 
+                      fontWeight: 'bold', fontSize: '20px'
+             }}
           >
             Deploy
           </Button>
