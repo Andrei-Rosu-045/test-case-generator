@@ -1,11 +1,11 @@
+// src/components/GenerateTestCasesCard.tsx
 import React, { useState } from 'react';
 import { Dropdown, Form, Button } from 'react-bootstrap';
-import './Card.css';
+import './GenerateTestCasesCard.css';
 import { RiAiGenerate } from "react-icons/ri";
 import { BsCloudUpload } from 'react-icons/bs';
-import './GenerateTestCasesCard.css';
 
-interface GenerateTestCasesCardProps  {
+interface GenerateTestCasesCardProps {
   projectName: string;
   className?: string;
 }
@@ -21,14 +21,21 @@ const GenerateTestCasesCard: React.FC<GenerateTestCasesCardProps> = ({ className
 
   const handleSelect = (eventKey: string | null, field: string) => {
     if (eventKey) {
-      if (field === 'fileType') {
-        setFileType(eventKey);
-      } else if (field === 'testCaseMethod') {
-        setTestCaseMethod(eventKey);
-      } else if (field === 'summarizeRequirements') {
-        setSummarizeRequirements(eventKey);
-      } else if (field === 'selectedModel') {
-        setSelectedModel(eventKey);
+      switch (field) {
+        case 'fileType':
+          setFileType(eventKey);
+          break;
+        case 'testCaseMethod':
+          setTestCaseMethod(eventKey);
+          break;
+        case 'summarizeRequirements':
+          setSummarizeRequirements(eventKey);
+          break;
+        case 'selectedModel':
+          setSelectedModel(eventKey);
+          break;
+        default:
+          break;
       }
     }
   };
@@ -43,11 +50,17 @@ const GenerateTestCasesCard: React.FC<GenerateTestCasesCardProps> = ({ className
   const fileLimitText =
     fileType === 'Image'
       ? 'Limit 200MB .PNG, .JPEG, .JPGA'
-      : fileType === 'DOCX' || 'PDF' || 'CSV' || 'TXT'
+      : ['DOCX', 'PDF', 'CSV', 'TXT'].includes(fileType)
       ? 'Limit 200MB .DOCX, .PDF, .CSV, .TXT'
       : '';
-    
-  const allowedFormats = fileType === 'DOCX' ? '.docx' : fileType === 'TXT' ? '.txt' : fileType === 'CSV' ? '.csv' : fileType === 'PDF' ? '.pdf' : fileType === 'Image' ? '.png' : '';
+
+  const allowedFormats =
+    fileType === 'DOCX' ? '.docx' :
+    fileType === 'TXT' ? '.txt' :
+    fileType === 'CSV' ? '.csv' :
+    fileType === 'PDF' ? '.pdf' :
+    fileType === 'Image' ? '.png, .jpeg, .jpg, .jpga' :
+    '';
 
   return (
     <div className={`card custom-card ${className}`}>
@@ -98,7 +111,11 @@ const GenerateTestCasesCard: React.FC<GenerateTestCasesCardProps> = ({ className
               onChange={handleFileUpload}
               className="d-none"
             />
-            <Button variant="outline-primary" className="upload-btn" onClick={() => document.getElementById('fileUploadGenerateTestCases')?.click()}>
+            <Button
+              variant="outline-primary"
+              className="upload-btn"
+              onClick={() => document.getElementById('fileUploadGenerateTestCases')?.click()}
+            >
               Upload File
             </Button>
             {file && (
@@ -176,7 +193,7 @@ const GenerateTestCasesCard: React.FC<GenerateTestCasesCardProps> = ({ className
                 className="mt-3"
                 disabled={businessArea === ''}
               >
-                Generate test cases
+                Generate Test Cases
               </Button>
             </>
           )}

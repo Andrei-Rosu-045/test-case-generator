@@ -1,103 +1,46 @@
-.custom-card {
-    border-radius: 10px;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  .custom-card .card-header {
-    background-color: #172031;
-    color: #d7d9db;
-    border-radius: 10px 10px 0 0;
-  }
-  
-  .custom-card .card-body {
-    background-color: #e9ecef;
-    padding: 20px;
-  }
-  
-  .custom-card .form-label {
-    font-weight: bold;
-  }
-  
-  .custom-card .form-control {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  
-  .custom-card .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .custom-card .btn {
-    margin-top: 10px;
-  }
-  
-  .custom-card .form-group .text-center {
-    text-align: center;
-  }
-  
-  .custom-card .form-group p {
-    margin: 10px 0;
-  }
-  
-  .custom-card .form-group strong {
-    display: block;
-    margin-top: 10px;
-  }
+.custom-dropdown .dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left; /* Align the text to the left */
+  padding-right: 1.5rem; /* Ensure padding for the arrow */
+}
 
-  .custom-select {
-    position: relative;
-    padding-right: 2.5rem; /* Adjust to ensure space for the icon */
-  }
+.custom-dropdown .dropdown-toggle::after {
+  margin-left: auto; /* Move the arrow to the far right */
+  margin-right: 0.5rem; /* Add some spacing between the arrow and the edge */
+}
 
-  .custom-dropdown .dropdown-toggle {
-    background-color: transparent;
-    border: 1px solid #ced4da; /* Maintain border color */
-  }
-  
-  .custom-dropdown .dropdown-toggle:hover,
-  .custom-dropdown .dropdown-toggle:focus,
-  .custom-dropdown .dropdown-toggle:active {
-    background-color: transparent; /* No background change on hover */
-    border-color: #ced4da; /* Keep border color consistent */
-    box-shadow: none; /* Remove any shadow effects */
-  }
-  
-  /* Optional: Adjust text color if needed */
-  .custom-dropdown .dropdown-toggle {
-    color: #495057; /* Default text color */
-  }
-  
-  .custom-dropdown .dropdown-toggle:hover,
-  .custom-dropdown .dropdown-toggle:focus,
-  .custom-dropdown .dropdown-toggle:active {
-    color: #495057; /* No text color change on hover */
-  }
-  
-  .custom-dropdown .dropdown-menu {
-    width: 100%;
-    min-width: unset;
-  }
-  
-  .custom-dropdown .dropdown-item {
-    width: 100%;
-  }
+.custom-dropdown .dropdown-menu {
+  width: 100%;
+  min-width: unset;
+}
 
-  button.upload-btn {
-    color: #172031;
-    border-color: #172031;
-  }
-  
-  button.upload-btn:hover {
-    background-color: #172031;
-    border-color: #172031;
-    color: white;
-  }
+.custom-dropdown .dropdown-item {
+  width: 100%;
+}
 
-  .file-limit-text {
-    font-size: 0.85rem; /* Smaller text */
-    color: rgba(0, 0, 0, 0.5); /* Semi-transparent text */
-    margin-top: -10px; /* Adjust spacing if needed */
-    margin-bottom: 20px; /* Adjust spacing if needed */
-  }
+.upload-btn {
+  color: #172031;
+  border-color: #172031;
+}
+
+.upload-btn:hover {
+  background-color: #172031;
+  border-color: #172031;
+  color: white;
+}
+
+.file-limit-text {
+  font-size: 0.85rem; /* Smaller text */
+  color: rgba(0, 0, 0, 0.5); /* Semi-transparent text */
+  margin-top: -10px; /* Adjust spacing if needed */
+  margin-bottom: 20px; /* Adjust spacing if needed */
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

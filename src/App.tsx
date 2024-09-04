@@ -1,5 +1,7 @@
+// src/App.tsx
 import React, { useState } from 'react';
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import UploadFileCard from './components/UploadFileCard';
 import ProjectNameCard from './components/ProjectNameCard';
 import GenerateTestCasesCard from './components/GenerateTestCasesCard';
@@ -7,20 +9,30 @@ import './App.css';
 
 const App: React.FC = () => {
   const [projectName, setProjectName] = useState<string>('');
+  const [selectedOption, setSelectedOption] = useState<string>('uploadFile'); // Default to 'uploadFile'
+
+  const renderMainContent = () => {
+    if (selectedOption === 'uploadFile') {
+      return (
+        <div className="upload-section">
+          <ProjectNameCard projectName={projectName} setProjectName={setProjectName} />
+          <UploadFileCard />
+        </div>
+      );
+    } else if (selectedOption === 'generateTestCases') {
+      return <GenerateTestCasesCard projectName={projectName} />;
+    }
+    return null;
+  };
 
   return (
-    <div>
+    <div className="app-container">
       <Header />
-      <div className="container mt-4">
-        <div className="row">
-          <div className="col-md-4">
-            <ProjectNameCard className="card-two mt-3" projectName={projectName} setProjectName={setProjectName} />
-            <UploadFileCard className="card-one" />
-          </div>
-          <div className="col-md-8">
-            <GenerateTestCasesCard className="card-three" projectName={projectName} />
-          </div>
-        </div>
+      <div className="content-container">
+        <Sidebar selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
+        <main className="main-content">
+          {renderMainContent()}
+        </main>
       </div>
     </div>
   );

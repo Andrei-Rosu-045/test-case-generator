@@ -1,130 +1,50 @@
-.custom-card {
-    border-radius: 10px;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  .custom-card .card-header {
-    background-color: #8490a9;
-    color: #ffffff;
-    border-radius: 10px 10px 0 0;
-  }
-  
-  .custom-card .card-body {
-    background-color: #f2f6fe;
-    padding: 20px;
-  }
-  
-  .custom-card .form-label {
-    font-weight: bold;
-  }
-  
-  .custom-card .form-control {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  
-  .custom-card .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .custom-card .btn {
-    margin-top: 10px;
-  }
-  
-  .custom-card .form-group .text-center {
-    text-align: center;
-  }
-  
-  .custom-card .form-group p {
-    margin: 10px 0;
-  }
-  
-  .custom-card .form-group strong {
-    display: block;
-    margin-top: 10px;
-  }
+/* src/components/GenerateTestCasesCard.css */
+/* Assuming you have Card.css handling .custom-card styles */
 
-  .custom-select {
-    position: relative;
-    padding-right: 2.5rem; /* Adjust to ensure space for the icon */
-  }
+/* Additional styles specific to GenerateTestCasesCard if needed */
 
-  .custom-dropdown .dropdown-toggle {
-    background-color: transparent;
-    border: 1px solid #ced4da; /* Maintain border color */
-  }
-  
-  .custom-dropdown .dropdown-toggle:hover,
-  .custom-dropdown .dropdown-toggle:focus,
-  .custom-dropdown .dropdown-toggle:active {
-    background-color: transparent; /* No background change on hover */
-    border-color: #ced4da; /* Keep border color consistent */
-    box-shadow: none; /* Remove any shadow effects */
-  }
-  
-  /* Optional: Adjust text color if needed */
-  .custom-dropdown .dropdown-toggle {
-    color: #495057; /* Default text color */
-  }
-  
-  .custom-dropdown .dropdown-toggle:hover,
-  .custom-dropdown .dropdown-toggle:focus,
-  .custom-dropdown .dropdown-toggle:active {
-    color: #495057; /* No text color change on hover */
-  }
-  
-  .custom-dropdown .dropdown-menu {
-    width: 100%;
-    min-width: unset;
-  }
-  
-  .custom-dropdown .dropdown-item {
-    width: 100%;
-  }
+.custom-dropdown .dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left; /* Align the text to the left */
+  padding-right: 1.5rem; /* Ensure padding for the arrow */
+}
 
-  button.upload-btn {
-    color: #172031;
-    border-color: #172031;
-  }
-  
-  button.upload-btn:hover {
-    background-color: #172031;
-    border-color: #172031;
-    color: white;
-  }
+.custom-dropdown .dropdown-toggle::after {
+  margin-left: auto; /* Move the arrow to the far right */
+  margin-right: 0.5rem; /* Add some spacing between the arrow and the edge */
+}
 
-  .file-limit-text {
-    font-size: 0.85rem; /* Smaller text */
-    color: rgba(0, 0, 0, 0.5); /* Semi-transparent text */
-    margin-top: -10px; /* Adjust spacing if needed */
-    margin-bottom: 20px; /* Adjust spacing if needed */
-  }
-  .custom-dropdown .dropdown-toggle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left; /* Align the text to the left */
-    padding-right: 1.5rem; /* Ensure padding for the arrow */
-  }
-  
-  .custom-dropdown .dropdown-toggle::after {
-    margin-left: auto; /* Move the arrow to the far right */
-    margin-right: 0.5rem; /* Add some spacing between the arrow and the edge */
-  }
-  
-  .custom-dropdown .dropdown-menu {
-    width: 100%;
-    min-width: unset;
-  }
-  
-  .custom-dropdown .dropdown-item {
-    width: 100%
-  }
+.custom-dropdown .dropdown-menu {
+  width: 100%;
+  min-width: unset;
+}
 
-  .generate-button {
-    display: block;      /* Makes the button take up the full width of its container */
-    margin: 20px auto;   /* Auto margin on the left and right centers the button */
-    width: fit-content;  /* The button will take up only as much width as its content */
-  }
+.custom-dropdown .dropdown-item {
+  width: 100%;
+}
+
+.upload-btn {
+  color: #172031;
+  border-color: #172031;
+}
+
+.upload-btn:hover {
+  background-color: #172031;
+  border-color: #172031;
+  color: white;
+}
+
+.file-limit-text {
+  font-size: 0.85rem; /* Smaller text */
+  color: rgba(0, 0, 0, 0.5); /* Semi-transparent text */
+  margin-top: -10px; /* Adjust spacing if needed */
+  margin-bottom: 20px; /* Adjust spacing if needed */
+}
+
+.generate-button {
+  display: block;      /* Makes the button take up the full width of its container */
+  margin: 20px auto;   /* Auto margin on the left and right centers the button */
+  width: fit-content;  /* The button will take up only as much width as its content */
+}
